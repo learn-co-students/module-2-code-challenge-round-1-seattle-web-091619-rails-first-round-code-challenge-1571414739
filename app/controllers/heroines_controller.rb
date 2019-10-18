@@ -25,6 +25,7 @@ class HeroinesController < ApplicationController
   end
 
   def update
+    @heroine = Heroine.find(params[:id])
     if @heroine.update(heroine_params)
       redirect_to heroine_path(@heroine)
     else
