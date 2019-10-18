@@ -1,0 +1,7 @@
+<h1><%= @heroine.super_name %></h1><br>
+
+<h3>Name: <%= @heroine.name %></h3>
+<h3>Power: <%= link_to @heroine.power.name, power_path(@heroine.power) %></h3>
+
+<%= button_to "Edit #{@heroine.super_name}", edit_heroine_path, method: 'get' %>
+<%= button_to "Home", heroines_path, method: 'get' %>
